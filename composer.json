@@ -1,0 +1,11 @@
+{
+    "name": "nikolay/php-project-lvl1",
+    "description": "Проект Игры разума",
+    "authors": [
+        {
+            "name": "Nikolay Kalashnikov",
+            "email": "kalash-job@yandex.ru"
+        }
+    ],
+    "require": {}
+}
