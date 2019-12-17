@@ -1,5 +1,5 @@
 {
-    "name": "nikolay/php-project-lvl1",
+    "name": "nikolay-kalashnikov/php-project-lvl1",
     "description": "Проект Игры разума",
     "bin": ["bin/brain-games"],
     "authors": [
