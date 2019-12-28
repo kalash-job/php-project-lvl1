@@ -1,7 +1,10 @@
 {
     "name": "nikolay-kalashnikov/php-project-lvl1",
     "description": "Проект Игры разума",
-    "bin": ["bin/brain-games"],
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even"
+    ],
     "authors": [
         {
             "name": "Nikolay Kalashnikov",
@@ -13,7 +16,8 @@
     },
     "autoload": {
         "files": [
-            "src/Cli.php"
+            "src/Cli.php",
+            "src/Even.php"
         ]
     },
     "require": {
