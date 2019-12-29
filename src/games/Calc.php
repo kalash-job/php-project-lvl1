@@ -1,0 +1,3 @@
+<?php
+
+namespace BrainGames\Calc;
