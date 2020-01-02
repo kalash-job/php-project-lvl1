@@ -19,3 +19,11 @@ How to install brain-calc with composer:
 How to play brain-calc:
 
 [![asciicast](https://asciinema.org/a/L6F8ggHO4zGArKJcKXHyvjcw1.svg)](https://asciinema.org/a/L6F8ggHO4zGArKJcKXHyvjcw1)
+
+How to install brain-gcd with composer:
+
+[![asciicast](https://asciinema.org/a/nFqrJa7CHtBLVgVZ7NbaduhBM.svg)](https://asciinema.org/a/nFqrJa7CHtBLVgVZ7NbaduhBM)
+
+How to play brain-gcd:
+
+[![asciicast](https://asciinema.org/a/ypy2OyH5oUltfG9RnkGXCCPez.svg)](https://asciinema.org/a/ypy2OyH5oUltfG9RnkGXCCPez)
