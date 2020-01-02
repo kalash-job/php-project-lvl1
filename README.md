@@ -11,3 +11,9 @@ How to install brain-even with composer:
 How to play brain-even:
 
 [![asciicast](https://asciinema.org/a/r3Riu63bLmkSsVOxDJQTNUmT8.svg)](https://asciinema.org/a/r3Riu63bLmkSsVOxDJQTNUmT8)
+
+How to install brain-calc with composer:
+[![asciicast](https://asciinema.org/a/dvQQPvDflMLV7yK1ueihJ2jLH.svg)](https://asciinema.org/a/dvQQPvDflMLV7yK1ueihJ2jLH)
+
+How to play brain-calc:
+[![asciicast](https://asciinema.org/a/L6F8ggHO4zGArKJcKXHyvjcw1.svg)](https://asciinema.org/a/L6F8ggHO4zGArKJcKXHyvjcw1)
