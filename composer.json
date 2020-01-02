@@ -3,6 +3,7 @@
     "description": "Проект Игры разума",
     "bin": [
         "bin/brain-games",
+        "bin/brain-calc",
         "bin/brain-even"
     ],
     "authors": [
