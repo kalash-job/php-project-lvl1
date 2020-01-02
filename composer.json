@@ -4,6 +4,7 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-calc",
+        "bin/brain-gcd",
         "bin/brain-even"
     ],
     "authors": [
@@ -20,6 +21,7 @@
             "src/Cli.php",
             "src/Game.php",
             "src/games/Even.php",
+            "src/games/Gcd.php",
             "src/games/Calc.php"
         ]
     },
