@@ -27,3 +27,11 @@ How to install brain-gcd with composer:
 How to play brain-gcd:
 
 [![asciicast](https://asciinema.org/a/ypy2OyH5oUltfG9RnkGXCCPez.svg)](https://asciinema.org/a/ypy2OyH5oUltfG9RnkGXCCPez)
+
+How to install brain-progression with composer:
+
+[![asciicast](https://asciinema.org/a/ajH32hJjuNgoDiN8JRKD3y0b7.svg)](https://asciinema.org/a/ajH32hJjuNgoDiN8JRKD3y0b7)
+
+How to play brain-progression:
+
+[![asciicast](https://asciinema.org/a/uYNuwRwgU5CtTzz94yjnkuK4z.svg)](https://asciinema.org/a/uYNuwRwgU5CtTzz94yjnkuK4z)
