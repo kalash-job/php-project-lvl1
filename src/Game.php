@@ -7,13 +7,15 @@ use function cli\prompt;
 use function BrainGames\Even\getTaskEven;
 use function BrainGames\Calc\getTaskCalc;
 use function BrainGames\Gcd\getTaskGcd;
+use function BrainGames\Progression\getTaskProgression;
 
 function playBrainGame(string $gamesType)
 {
     $tasks = [
         'even' => 'Answer "yes" if the number is even, otherwise answer "no".',
         'calc' => 'What is the result of the expression?',
-        'gcd' => 'Find the greatest common divisor of given numbers.'
+        'gcd' => 'Find the greatest common divisor of given numbers.',
+        'progression' => 'What number is missing in the progression?'
     ];
     line('Welcome to the Brain Games!');
     $task = $tasks[$gamesType];
@@ -33,6 +35,9 @@ function playBrainGame(string $gamesType)
                 break;
             case 'gcd':
                 [$question, $correctAnswer] = getTaskGcd();
+                break;
+            case 'progression':
+                [$question, $correctAnswer] = getTaskProgression();
                 break;
         }
         line("Question: $question");
