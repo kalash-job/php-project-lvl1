@@ -35,3 +35,11 @@ How to install brain-progression with composer:
 How to play brain-progression:
 
 [![asciicast](https://asciinema.org/a/uYNuwRwgU5CtTzz94yjnkuK4z.svg)](https://asciinema.org/a/uYNuwRwgU5CtTzz94yjnkuK4z)
+
+How to install brain-prime with composer:
+
+[![asciicast](https://asciinema.org/a/rTfX12Y6MCy4pXi4NUUdJj0DI.svg)](https://asciinema.org/a/rTfX12Y6MCy4pXi4NUUdJj0DI)
+
+How to play brain-prime:
+
+[![asciicast](https://asciinema.org/a/QBKnWWV2e4K2B6MHWNoNCR6WT.svg)](https://asciinema.org/a/QBKnWWV2e4K2B6MHWNoNCR6WT)
