@@ -2,6 +2,14 @@
 
 namespace BrainGames\Progression;
 
+/**
+ * Функция возвращает вопрос и правильный ответ для задания brain-progression
+ *
+ * Функция создает случайную прогрессию с пропуском в задании brain-progression
+ * и возвращает массив с прогрессией и правильным ответом к заданию.
+ *
+ * @return array
+ */
 function getTaskProgression(): array
 {
     $numberOfMembers = 10;

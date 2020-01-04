@@ -10,6 +10,13 @@ use function BrainGames\Gcd\getTaskGcd;
 use function BrainGames\Progression\getTaskProgression;
 use function BrainGames\Prime\getTaskPrime;
 
+/**
+ * Функция playBrainGame формирует диалог с пользователем игр
+ *
+ * @param  string $gamesType
+ *
+ * @return void
+ */
 function playBrainGame(string $gamesType)
 {
     $tasks = [

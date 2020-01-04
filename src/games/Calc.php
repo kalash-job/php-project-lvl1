@@ -2,6 +2,14 @@
 
 namespace BrainGames\Calc;
 
+/**
+ * Функция создает и возвращает вопрос и ответ к заданию в brain-calc
+ *
+ * Функция формирует случайное выражение-вопрос, рассчитывает ответ
+ * и возвращает массив с вопросом и ответом.
+ *
+ * @return array
+ */
 function getTaskCalc(): array
 {
     $arithmeticOperators = ['+', '-', '*'];
