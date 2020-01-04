@@ -8,6 +8,7 @@ use function BrainGames\Even\getTaskEven;
 use function BrainGames\Calc\getTaskCalc;
 use function BrainGames\Gcd\getTaskGcd;
 use function BrainGames\Progression\getTaskProgression;
+use function BrainGames\Prime\getTaskPrime;
 
 function playBrainGame(string $gamesType)
 {
@@ -15,7 +16,8 @@ function playBrainGame(string $gamesType)
         'even' => 'Answer "yes" if the number is even, otherwise answer "no".',
         'calc' => 'What is the result of the expression?',
         'gcd' => 'Find the greatest common divisor of given numbers.',
-        'progression' => 'What number is missing in the progression?'
+        'progression' => 'What number is missing in the progression?',
+        'prime' => 'Answer "yes" if given number is prime. Otherwise answer "no".'
     ];
     line('Welcome to the Brain Games!');
     $task = $tasks[$gamesType];
@@ -38,6 +40,9 @@ function playBrainGame(string $gamesType)
                 break;
             case 'progression':
                 [$question, $correctAnswer] = getTaskProgression();
+                break;
+            case 'prime':
+                [$question, $correctAnswer] = getTaskPrime();
                 break;
         }
         line("Question: $question");
