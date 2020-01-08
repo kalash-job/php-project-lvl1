@@ -6,7 +6,7 @@
 
 How to install Mind game with composer:
 
-[![asciicast](https://asciinema.org/a/rTfX12Y6MCy4pXi4NUUdJj0DI.svg)](https://asciinema.org/a/rTfX12Y6MCy4pXi4NUUdJj0DI)
+[![asciicast](https://asciinema.org/a/MkoXN0snxa4cm0VTaqrphlefC.svg)](https://asciinema.org/a/MkoXN0snxa4cm0VTaqrphlefC)
 
 How to play brain-even:
 
