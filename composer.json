@@ -1,6 +1,10 @@
 {
     "name": "nikolay-kalashnikov/php-project-lvl1",
     "description": "Проект Игры разума",
+    "keywords": [
+        "games", 
+        "console game"
+    ],
     "bin": [
         "bin/brain-games",
         "bin/brain-calc",
@@ -9,6 +13,7 @@
         "bin/brain-prime",
         "bin/brain-even"
     ],
+    "type": "library",
     "authors": [
         {
             "name": "Nikolay Kalashnikov",
