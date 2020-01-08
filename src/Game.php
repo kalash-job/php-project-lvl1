@@ -32,9 +32,9 @@ function playBrainGame(string $gamesType)
     line('');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    $count = 0;
-    $winNumber = 3;
-    while ($count < $winNumber) {
+    $winCount = 0;
+    $limitWinCount = 3;
+    while ($winCount < $limitWinCount) {
         switch ($gamesType) {
             case 'even':
                 [$question, $correctAnswer] = getTaskEven();
@@ -55,7 +55,7 @@ function playBrainGame(string $gamesType)
         line("Question: $question");
         $answer = strtolower(prompt('Your answer'));
         if ($correctAnswer === $answer) {
-            $count++;
+            $winCount++;
             line('Correct!');
         } else {
             line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswer'.");
