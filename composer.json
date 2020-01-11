@@ -13,7 +13,7 @@
         "bin/brain-prime",
         "bin/brain-even"
     ],
-    "type": "library",
+    "type": "project",
     "authors": [
         {
             "name": "Nikolay Kalashnikov",
