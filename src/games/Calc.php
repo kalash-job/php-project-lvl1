@@ -13,9 +13,10 @@ namespace BrainGames\Calc;
 function getTaskCalc(): array
 {
     $arithmeticOperators = ['+', '-', '*'];
+    $length = count($arithmeticOperators);
     $firstOperand = mt_rand(1, 50);
     $secondOperand = mt_rand(1, 50);
-    $operator = $arithmeticOperators[mt_rand(0, 2)];
+    $operator = $arithmeticOperators[mt_rand(0, $length - 1)];
     $expressionQuestion = "$firstOperand $operator $secondOperand";
     switch ($operator) {
         case '+':
