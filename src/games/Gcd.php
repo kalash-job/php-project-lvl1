@@ -38,7 +38,7 @@ function getTaskGcd(): array
 {
     $firstOperand = mt_rand(1, 50);
     $secondOperand = mt_rand(1, 50);
-    $expression = "$firstOperand $secondOperand";
+    $expressionQuestion = "$firstOperand $secondOperand";
     $correctAnswer = (string) getGcd($firstOperand, $secondOperand);
-    return [$expression, $correctAnswer];
+    return [$expressionQuestion, $correctAnswer];
 }

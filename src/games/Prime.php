@@ -35,7 +35,7 @@ function isPrime(int $number): bool
  */
 function getTaskPrime(): array
 {
-    $randomNumber = mt_rand(1, 1000);
-    $correctAnswer = isPrime($randomNumber) ? 'yes' : 'no';
-    return [$randomNumber, $correctAnswer];
+    $numberQuestion = mt_rand(1, 1000);
+    $correctAnswer = isPrime($numberQuestion) ? 'yes' : 'no';
+    return [$numberQuestion, $correctAnswer];
 }

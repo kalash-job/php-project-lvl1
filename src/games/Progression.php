@@ -12,12 +12,12 @@ namespace BrainGames\Progression;
  */
 function getTaskProgression(): array
 {
-    $numberOfMembers = 10;
+    $length = 10;
     $difference = mt_rand(1, 10);
-    $numberOfHiddenMember  = mt_rand(0, $numberOfMembers - 1);
+    $numberOfHiddenMember  = mt_rand(0, $length - 1);
     $progression = [];
     $firstMember = mt_rand(1, 10);
-    for ($i = 0; $i < $numberOfMembers; $i++) {
+    for ($i = 0; $i < $length; $i++) {
         if ($i !== $numberOfHiddenMember) {
             $progression[] = $firstMember + $difference * $i;
         } else {
@@ -25,6 +25,6 @@ function getTaskProgression(): array
             $correctAnswer = (string) ($firstMember + $difference * $i);
         }
     }
-    $expression = implode(' ', $progression);
-    return [$expression, $correctAnswer];
+    $expressionQuestion = implode(' ', $progression);
+    return [$expressionQuestion, $correctAnswer];
 }
