@@ -5,10 +5,10 @@ namespace BrainGames\Calc;
 use function BrainGames\Game\playBrainGame;
 
 /**
- * Функция создает и возвращает задание, вопросы и ответы к заданию в brain-calc
+ * Функция создает задание, вопросы и ответы к заданию brain-calc
  *
  * Функция формирует текст задания, три случайных выражения-вопроса, рассчитывает ответы
- * и возвращает массив с заданием, вопросами и ответами.
+ * и передает в "движок" задание, массивы с вопросами и ответами.
  *
  * @return void
  */
@@ -38,4 +38,5 @@ function getTaskCalc()
         }
     }
     playBrainGame($task, $expressionsQuestions, $correctAnswers);
+    return;
 }
