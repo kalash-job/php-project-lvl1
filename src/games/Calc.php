@@ -7,7 +7,7 @@ use function BrainGames\Game\playBrainGame;
 /**
  * Функция создает и возвращает задание, вопросы и ответы к заданию в brain-calc
  *
- * Функция формирует текст задания три случайных выражения-вопроса, рассчитывает ответы
+ * Функция формирует текст задания, три случайных выражения-вопроса, рассчитывает ответы
  * и возвращает массив с заданием, вопросами и ответами.
  *
  * @return void
@@ -15,16 +15,16 @@ use function BrainGames\Game\playBrainGame;
 function getTaskCalc()
 {
     $task = 'What is the result of the expression?';
-    $numberOfQuestions = 3;
-    $expressionQuestions = [];
+    $countOfQuestions = 3;
+    $expressionsQuestions = [];
     $correctAnswers = [];
-    for ($i = 0; $i < $numberOfQuestions; $i++) {
+    for ($i = 0; $i < $countOfQuestions; $i++) {
         $arithmeticOperators = ['+', '-', '*'];
         $length = count($arithmeticOperators);
         $firstOperand = mt_rand(1, 50);
         $secondOperand = mt_rand(1, 50);
         $operator = $arithmeticOperators[mt_rand(0, $length - 1)];
-        $expressionQuestions[] = "$firstOperand $operator $secondOperand";
+        $expressionsQuestions[] = "$firstOperand $operator $secondOperand";
         switch ($operator) {
             case '+':
                 $correctAnswers[] = (string) ($firstOperand + $secondOperand);
@@ -37,5 +37,5 @@ function getTaskCalc()
                 break;
         }
     }
-    playBrainGame($task, $expressionQuestions, $correctAnswers);
+    playBrainGame($task, $expressionsQuestions, $correctAnswers);
 }
