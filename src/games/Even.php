@@ -2,17 +2,26 @@
 
 namespace BrainGames\Even;
 
+use function BrainGames\Game\playBrainGame;
+
 /**
- * Функция возвращает вопрос и правильный ответ для задания brain-even
+ * Функция создает и возвращает задание, вопросы и ответы к заданию brain-even
  *
- * Функция создает случайное целое число-вопрос в задании brain-even
- * и возвращает массив с этим числом и правильным ответом.
+ * Функция формирует текст задания, три случайных целых число-вопроса в задании brain-even
+ * и возвращает массив с заданием, с этими числами и правильными ответами.
  *
- * @return array
+ * @return void
  */
-function getTaskEven(): array
+function getTaskEven()
 {
-    $numberQuestion = mt_rand(1, 100);
-    $correctAnswer = $numberQuestion % 2 === 0 ? 'yes' : 'no';
-    return [$numberQuestion, $correctAnswer];
+    $task = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $countOfQuestions = 3;
+    $numbersQuestions = [];
+    $correctAnswers = [];
+    for ($i = 0; $i < $countOfQuestions; $i++) {
+        $numbersQuestions[] = mt_rand(1, 100);
+        $correctAnswers[] = $numbersQuestions[$i] % 2 === 0 ? 'yes' : 'no';
+    }
+    
+    playBrainGame($task, $numbersQuestions, $correctAnswers);
 }
