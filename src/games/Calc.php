@@ -2,32 +2,40 @@
 
 namespace BrainGames\Calc;
 
+use function BrainGames\Game\playBrainGame;
+
 /**
- * Функция создает и возвращает вопрос и ответ к заданию в brain-calc
+ * Функция создает и возвращает задание, вопросы и ответы к заданию в brain-calc
  *
- * Функция формирует случайное выражение-вопрос, рассчитывает ответ
- * и возвращает массив с вопросом и ответом.
+ * Функция формирует текст задания три случайных выражения-вопроса, рассчитывает ответы
+ * и возвращает массив с заданием, вопросами и ответами.
  *
- * @return array
+ * @return void
  */
-function getTaskCalc(): array
+function getTaskCalc()
 {
-    $arithmeticOperators = ['+', '-', '*'];
-    $length = count($arithmeticOperators);
-    $firstOperand = mt_rand(1, 50);
-    $secondOperand = mt_rand(1, 50);
-    $operator = $arithmeticOperators[mt_rand(0, $length - 1)];
-    $expressionQuestion = "$firstOperand $operator $secondOperand";
-    switch ($operator) {
-        case '+':
-            $correctAnswer = (string) ($firstOperand + $secondOperand);
-            break;
-        case '-':
-            $correctAnswer = (string) ($firstOperand - $secondOperand);
-            break;
-        case '*':
-            $correctAnswer = (string) ($firstOperand * $secondOperand);
-            break;
+    $task = 'What is the result of the expression?';
+    $numberOfQuestions = 3;
+    $expressionQuestions = [];
+    $correctAnswers = [];
+    for ($i = 0; $i < $numberOfQuestions; $i++) {
+        $arithmeticOperators = ['+', '-', '*'];
+        $length = count($arithmeticOperators);
+        $firstOperand = mt_rand(1, 50);
+        $secondOperand = mt_rand(1, 50);
+        $operator = $arithmeticOperators[mt_rand(0, $length - 1)];
+        $expressionQuestions[] = "$firstOperand $operator $secondOperand";
+        switch ($operator) {
+            case '+':
+                $correctAnswers[] = (string) ($firstOperand + $secondOperand);
+                break;
+            case '-':
+                $correctAnswers[] = (string) ($firstOperand - $secondOperand);
+                break;
+            case '*':
+                $correctAnswers[] = (string) ($firstOperand * $secondOperand);
+                break;
+        }
     }
-    return [$expressionQuestion, $correctAnswer];
+    playBrainGame($task, $expressionQuestions, $correctAnswers);
 }
