@@ -2,6 +2,8 @@
 
 namespace BrainGames\Prime;
 
+use function BrainGames\Game\playBrainGame;
+
 /**
  * Функция isPrime проверяет простоту числа
  *
@@ -26,16 +28,23 @@ function isPrime(int $number): bool
 }
 
 /**
- * Функция создает и возвращает вопрос и ответ к заданию в brain-prime
+ * Функция создает и возвращает задание, вопросы и ответы к заданию brain-prime
  *
- * Функция создает случайное целое число-вопрос в задании brain-prime
- * и возвращает массив с этим числом и правильным ответом.
+ * Функция формирует текст задания, три случайных целых числа-вопроса в задании brain-prime
+ * передает в "движок" задание, массивы с вопросами и ответами.
  *
- * @return array
+ * @return void
  */
-function getTaskPrime(): array
+function getTaskPrime()
 {
-    $numberQuestion = mt_rand(1, 1000);
-    $correctAnswer = isPrime($numberQuestion) ? 'yes' : 'no';
-    return [$numberQuestion, $correctAnswer];
+    $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $countOfQuestions = 3;
+    $numbersQuestions = [];
+    $correctAnswers = [];
+    for ($i = 0; $i < $countOfQuestions; $i++) {
+        $numbersQuestions[] = mt_rand(1, 1000);
+        $correctAnswers[] = isPrime($numbersQuestions[$i]) ? 'yes' : 'no';
+    }
+    playBrainGame($task, $numbersQuestions, $correctAnswers);
+    return;
 }
