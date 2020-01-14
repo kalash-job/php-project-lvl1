@@ -4,58 +4,30 @@ namespace BrainGames\Game;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Even\getTaskEven;
-use function BrainGames\Calc\getTaskCalc;
-use function BrainGames\Gcd\getTaskGcd;
-use function BrainGames\Progression\getTaskProgression;
-use function BrainGames\Prime\getTaskPrime;
 
 /**
  * Функция playBrainGame формирует диалог с пользователем игр
  *
- * @param  string $gamesType
+ * @param  string $task
+ * @param  array $questions
+ * @param  array $correctAnswers
  *
  * @return void
  */
-function playBrainGame(string $gamesType)
+function playBrainGame(string $task, array $questions, array $correctAnswers)
 {
-    $tasks = [
-        'even' => 'Answer "yes" if the number is even, otherwise answer "no".',
-        'calc' => 'What is the result of the expression?',
-        'gcd' => 'Find the greatest common divisor of given numbers.',
-        'progression' => 'What number is missing in the progression?',
-        'prime' => 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    ];
     line('Welcome to the Brain Games!');
-    $task = $tasks[$gamesType];
     line($task);
     line('');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     for ($i = 0, $limitWinCount = 3; $i < $limitWinCount; $i++) {
-        switch ($gamesType) {
-            case 'even':
-                [$question, $correctAnswer] = getTaskEven();
-                break;
-            case 'calc':
-                [$question, $correctAnswer] = getTaskCalc();
-                break;
-            case 'gcd':
-                [$question, $correctAnswer] = getTaskGcd();
-                break;
-            case 'progression':
-                [$question, $correctAnswer] = getTaskProgression();
-                break;
-            case 'prime':
-                [$question, $correctAnswer] = getTaskPrime();
-                break;
-        }
-        line("Question: $question");
+        line("Question: $questions[$i]");
         $answer = strtolower(prompt('Your answer'));
-        if ($correctAnswer === $answer) {
+        if ($correctAnswers[$i] === $answer) {
             line('Correct!');
         } else {
-            line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswer'.");
+            line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswers[$i]'.");
             line("Let's try again, $name!");
             return;
         }
