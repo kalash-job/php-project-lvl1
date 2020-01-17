@@ -4,6 +4,8 @@ namespace BrainGames\games\Prime;
 
 use function BrainGames\Game\playBrainGame;
 
+use const BrainGames\Game\MAX_WINS_COUNT;
+
 /**
  * Функция isPrime проверяет простоту числа
  *
@@ -41,10 +43,9 @@ function isPrime(int $number): bool
 function getTaskPrime()
 {
     $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $countOfQuestions = 3;
     $numbersQuestions = [];
     $correctAnswers = [];
-    for ($i = 0; $i < $countOfQuestions; $i++) {
+    for ($i = 0; $i < MAX_WINS_COUNT; $i++) {
         $numbersQuestions[] = mt_rand(1, 1000);
         $correctAnswers[] = isPrime($numbersQuestions[$i]) ? 'yes' : 'no';
     }

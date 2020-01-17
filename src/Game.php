@@ -21,7 +21,8 @@ function playBrainGame(string $task, array $questions, array $correctAnswers)
     line('');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    for ($i = 0, $limitWinCount = 3; $i < $limitWinCount; $i++) {
+    define('MAX_WINS_COUNT', 3);
+    for ($i = 0; $i < MAX_WINS_COUNT; $i++) {
         line("Question: $questions[$i]");
         $answer = strtolower(prompt('Your answer'));
         $correctAnswer = $correctAnswers[$i];

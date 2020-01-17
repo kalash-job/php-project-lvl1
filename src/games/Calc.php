@@ -4,6 +4,8 @@ namespace BrainGames\games\Calc;
 
 use function BrainGames\Game\playBrainGame;
 
+use const BrainGames\Game\MAX_WINS_COUNT;
+
 /**
  * Функция создает задание, вопросы и ответы к заданию brain-calc
  *
@@ -15,10 +17,9 @@ use function BrainGames\Game\playBrainGame;
 function getTaskCalc()
 {
     $task = 'What is the result of the expression?';
-    $countOfQuestions = 3;
     $expressionsQuestions = [];
     $correctAnswers = [];
-    for ($i = 0; $i < $countOfQuestions; $i++) {
+    for ($i = 0; $i < MAX_WINS_COUNT; $i++) {
         $arithmeticOperators = ['+', '-', '*'];
         $length = count($arithmeticOperators);
         $firstOperand = mt_rand(1, 50);
