@@ -16,7 +16,10 @@ use function BrainGames\Game\playBrainGame;
  */
 function isPrime(int $number): bool
 {
-    if (($number !== 2 && $number % 2 === 0) || $number <= 1) {
+    if ($number !== 2 && $number % 2 === 0) {
+        return false;
+    }
+    if ($number <= 1) {
         return false;
     }
     for ($i = 3, $limit = sqrt($number); $i <= $limit; $i += 2) {
