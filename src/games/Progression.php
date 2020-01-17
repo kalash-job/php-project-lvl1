@@ -3,6 +3,7 @@
 namespace BrainGames\games\Progression;
 
 use function BrainGames\Game\playBrainGame;
+
 use const BrainGames\Game\MAX_WINS_COUNT;
 
 /**
