@@ -24,10 +24,11 @@ function playBrainGame(string $task, array $questions, array $correctAnswers)
     for ($i = 0, $limitWinCount = 3; $i < $limitWinCount; $i++) {
         line("Question: $questions[$i]");
         $answer = strtolower(prompt('Your answer'));
-        if ($correctAnswers[$i] === $answer) {
+        $correctAnswer = $correctAnswers[$i];
+        if ($correctAnswer === $answer) {
             line('Correct!');
         } else {
-            line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswers[$i]'.");
+            line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswer'.");
             line("Let's try again, $name!");
             return;
         }
