@@ -28,15 +28,16 @@ function getTaskCalc()
         $expressionsQuestions[] = "$firstOperand $operator $secondOperand";
         switch ($operator) {
             case '+':
-                $correctAnswers[] = (string) ($firstOperand + $secondOperand);
+                $correctAnswer = ($firstOperand + $secondOperand);
                 break;
             case '-':
-                $correctAnswers[] = (string) ($firstOperand - $secondOperand);
+                $correctAnswer = ($firstOperand - $secondOperand);
                 break;
             case '*':
-                $correctAnswers[] = (string) ($firstOperand * $secondOperand);
+                $correctAnswer = ($firstOperand * $secondOperand);
                 break;
         }
+        $correctAnswers[] = "$correctAnswer";
     }
     playBrainGame($task, $expressionsQuestions, $correctAnswers);
     return;
