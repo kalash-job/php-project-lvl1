@@ -17,7 +17,7 @@ use const BrainGames\Game\MAX_WINS_COUNT;
 function getTaskCalc()
 {
     $task = 'What is the result of the expression?';
-    $expressionsQuestions = [];
+    $questions = [];
     $correctAnswers = [];
     for ($i = 0; $i < MAX_WINS_COUNT; $i++) {
         $arithmeticOperators = ['+', '-', '*'];
@@ -25,7 +25,7 @@ function getTaskCalc()
         $firstOperand = mt_rand(1, 50);
         $secondOperand = mt_rand(1, 50);
         $operator = $arithmeticOperators[mt_rand(0, $length - 1)];
-        $expressionsQuestions[] = "$firstOperand $operator $secondOperand";
+        $questions[] = "$firstOperand $operator $secondOperand";
         switch ($operator) {
             case '+':
                 $correctAnswer = ($firstOperand + $secondOperand);
@@ -39,6 +39,6 @@ function getTaskCalc()
         }
         $correctAnswers[] = "$correctAnswer";
     }
-    playBrainGame($task, $expressionsQuestions, $correctAnswers);
+    playBrainGame($task, $questions, $correctAnswers);
     return;
 }

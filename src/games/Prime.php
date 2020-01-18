@@ -43,12 +43,12 @@ function isPrime(int $number): bool
 function getTaskPrime()
 {
     $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $numbersQuestions = [];
+    $questions = [];
     $correctAnswers = [];
     for ($i = 0; $i < MAX_WINS_COUNT; $i++) {
-        $numbersQuestions[] = mt_rand(1, 1000);
-        $correctAnswers[] = isPrime($numbersQuestions[$i]) ? 'yes' : 'no';
+        $questions[] = mt_rand(1, 1000);
+        $correctAnswers[] = isPrime($questions[$i]) ? 'yes' : 'no';
     }
-    playBrainGame($task, $numbersQuestions, $correctAnswers);
+    playBrainGame($task, $questions, $correctAnswers);
     return;
 }

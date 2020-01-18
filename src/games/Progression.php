@@ -17,7 +17,7 @@ use const BrainGames\Game\MAX_WINS_COUNT;
 function getTaskProgression()
 {
     $task = 'What number is missing in the progression?';
-    $expressionsQuestions = [];
+    $questions = [];
     $correctAnswers = [];
     for ($i = 0; $i < MAX_WINS_COUNT; $i++) {
         $length = 10;
@@ -33,8 +33,8 @@ function getTaskProgression()
                 $correctAnswers[] = (string) ($firstMember + $difference * $j);
             }
         }
-        $expressionsQuestions[] = implode(' ', $progression);
+        $questions[] = implode(' ', $progression);
     }
-    playBrainGame($task, $expressionsQuestions, $correctAnswers);
+    playBrainGame($task, $questions, $correctAnswers);
     return;
 }

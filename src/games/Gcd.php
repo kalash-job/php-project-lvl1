@@ -44,14 +44,14 @@ function getGcd(int $firstOperand, int $secondOperand): int
 function getTaskGcd()
 {
     $task = 'Find the greatest common divisor of given numbers.';
-    $expressionsQuestions = [];
+    $questions = [];
     $correctAnswers = [];
     for ($i = 0; $i < MAX_WINS_COUNT; $i++) {
         $firstOperand = mt_rand(1, 50);
         $secondOperand = mt_rand(1, 50);
-        $expressionsQuestions[] = "$firstOperand $secondOperand";
+        $questions[] = "$firstOperand $secondOperand";
         $correctAnswers[] = (string) getGcd($firstOperand, $secondOperand);
     }
-    playBrainGame($task, $expressionsQuestions, $correctAnswers);
+    playBrainGame($task, $questions, $correctAnswers);
     return;
 }
